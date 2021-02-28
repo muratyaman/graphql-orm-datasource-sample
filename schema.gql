@@ -1,0 +1,29 @@
+type Query {
+  hello: String!
+  trucks: [Truck!]!
+  findTruck(id: ID!): Truck!
+}
+
+type Truck {
+  id: ID!
+  reg: String!
+  make: String!
+  model: String!
+  emptyWeight: Float!
+  loadedWeight: Float!
+  parcels: [Parcel!]!
+  parcelCount: Int!
+}
+
+type Parcel {
+  id: ID!
+  weight: Float!
+}
+
+type User {
+  id: ID!
+  username: String!
+  firstName: String!
+  lastName: String!
+  fullName: String!
+}
